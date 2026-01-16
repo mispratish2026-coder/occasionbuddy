@@ -1,0 +1,26 @@
+// Firebase Storage Security Rules for OccasionBuddy
+// HOW TO DEPLOY:
+// 1. Go to Firebase Console > Storage > Rules
+// 2. Replace ALL content with this code
+// 3. Click "Publish" button
+// 4. Wait for it to deploy (usually 1-2 minutes)
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow authenticated users to read all files
+    match /{allPaths=**} {
+      allow read: if true;
+    }
+    
+    // Allow authenticated users to write only to products folder
+    match /products/{fileName} {
+      allow write: if request.auth != null;
+    }
+    
+    // Deny everything else
+    match /{allPaths=**} {
+      allow write: if false;
+    }
+  }
+}
