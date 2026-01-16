@@ -159,16 +159,16 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-amber-900 via-orange-900 to-yellow-900">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-          <div className="absolute top-40 right-10 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000" />
-          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-4000" />
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+          <div className="absolute top-40 right-10 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000" />
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-4000" />
         </div>
 
         {/* Background Image Overlay */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-5">
           <img
             src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1400&h=900&fit=crop"
             alt="Celebration"
@@ -181,21 +181,21 @@ export default function Home() {
           <div className="space-y-8">
             {/* Badge */}
             <div className="inline-block">
-              <span className="px-4 py-2 rounded-full bg-linear-to-r from-bg-orang-500/20 to- bg-orang-500/20 border border-yellow-400/30 text-yellow-100 text-sm font-semibold backdrop-blur-md">
+              <span className="px-4 py-2 rounded-full bg-linear-to-r from-orange-100 to-orange-50 border border-orange-300 text-orange-600 text-sm font-semibold backdrop-blur-md">
                 ✨ Occasion Means OccasionBuddy
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-tight">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-gray-900 leading-tight">
               Perfect Planning
-              <span className="block bg-linear-to-r from-yellow-300 via-amber-300 to-yellow-300 text-transparent bg-clip-text">
+              <span className="block bg-linear-to-r from-orange-500 via-orange-400 to-amber-500 text-transparent bg-clip-text">
                 Every Occasion
               </span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
               Your one-stop destination for planning unforgettable events. From birthdays to weddings, we've got you covered with premium cakes, stunning decorations, and thoughtful gifts.
             </p>
 
@@ -203,15 +203,15 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <button 
                 onClick={() => document.querySelector('[id="products"]')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group px-10 py-4 rounded-xl bg-linear-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-110 shadow-lg hover:shadow-yellow-500/50 relative overflow-hidden"
+                className="group px-10 py-4 rounded-xl bg-linear-to-r from-orange-500 to-orange-600 text-white font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-110 shadow-lg hover:shadow-orange-500/50 relative overflow-hidden"
               >
                 <span className="relative z-10">Explore Services</span>
-                <div className="absolute inset-0 bg-linear-to-r from-yellow-300 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-linear-to-r from-orange-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
               {!user && (
                 <Link
                   href="/signup"
-                  className="group px-10 py-4 rounded-xl border-2 border-yellow-400 text-white font-bold text-lg hover:bg-yellow-500/10 transition-all backdrop-blur-sm hover:border-amber-300 relative overflow-hidden"
+                  className="group px-10 py-4 rounded-xl border-2 border-orange-500 text-orange-600 font-bold text-lg hover:bg-orange-50 transition-all backdrop-blur-sm hover:border-orange-600 relative overflow-hidden"
                 >
                   <span className="relative z-10">Get Started Free</span>
                 </Link>
@@ -221,13 +221,13 @@ export default function Home() {
             {/* Stats */}
             <div className="flex flex-col sm:flex-row gap-8 justify-center pt-12">
               <div className="text-center">
-                <p className="text-3xl font-bold bg-linear-to-r from-yellow-400 to-amber-400 text-transparent bg-clip-text">500+</p>
-                <p className="text-gray-300 text-sm font-medium">Premium Products</p>
+                <p className="text-3xl font-bold bg-linear-to-r from-orange-500 to-amber-500 text-transparent bg-clip-text">500+</p>
+                <p className="text-gray-700 text-sm font-medium">Premium Products</p>
               </div>
-              <div className="hidden sm:block w-px bg-linear-to-b from-transparent via-yellow-500 to-transparent" />
+              <div className="hidden sm:block w-px bg-linear-to-b from-transparent via-orange-400 to-transparent" />
               <div className="text-center">
-                <p className="text-3xl font-bold bg-linear-to-r from-amber-400 to-yellow-400 text-transparent bg-clip-text">10K+</p>
-                <p className="text-gray-300 text-sm font-medium">Happy Customers</p>
+                <p className="text-3xl font-bold bg-linear-to-r from-amber-500 to-orange-500 text-transparent bg-clip-text">10K+</p>
+                <p className="text-gray-700 text-sm font-medium">Happy Customers</p>
               </div>
               <div className="hidden sm:block w-px bg-linear-to-b from-transparent via-orange-500 to-transparent" />
               <div className="text-center">
@@ -241,9 +241,9 @@ export default function Home() {
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
           <div className="flex flex-col items-center gap-2">
-            <p className="text-gray-300 text-sm font-medium">Scroll to explore</p>
+            <p className="text-gray-700 text-sm font-medium">Scroll to explore</p>
             <div className="animate-bounce">
-              <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>
