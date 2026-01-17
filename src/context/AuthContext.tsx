@@ -35,12 +35,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           if (userDoc.exists()) {
             const userData = userDoc.data();
             setUser({
-              uid: fbUser.uid,
-              name: userData.name,
-              email: userData.email,
-              role: userData.role,
-              createdAt: userData.createdAt?.toDate() || new Date(),
-            });
+  uid: fbUser.uid,
+  name: userData.name || "",
+  email: userData.email || "",
+  role: userData.role || "user",
+  mobileNo: userData.mobileNo || "",
+  createdAt: userData.createdAt?.toDate() || new Date(),
+});
+
           }
         } catch (error) {
           console.error("Error fetching user data:", error);
